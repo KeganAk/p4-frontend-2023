@@ -1,8 +1,15 @@
 import axios from "axios";
 
-const personajes = async (state: any ) => {
-    const peticion = await axios.get('https://rickandmortyapi.com/api/character')
+const initialUrl = "https://rickandmortyapi.com/api/character"
+
+const personajes = async (state: any, url: string ) => {
+    const peticion = await axios.get(url)
     state(peticion.data.results)
+}
+
+const info = async (state: any, url: string ) => {
+    const peticion = await axios.get(url)
+    state(peticion.data.info)
 }
 
 const unPersonaje = async (id: number, state: any) => {
@@ -12,5 +19,6 @@ const unPersonaje = async (id: number, state: any) => {
 
 export{
     personajes,
+    info,
     unPersonaje
 }
