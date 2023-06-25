@@ -31,7 +31,7 @@ const Paginacion = (props) => {
                 className="page-link text-dark"
                 onClick={onClickAnterior}
               >
-                Anterior
+                Previous
               </button>
             </li>
           ) : null}
@@ -41,7 +41,7 @@ const Paginacion = (props) => {
                 className="page-link text-dark"
                 onClick={onClickSiguiente}
               >
-                Siguiente
+                Next
               </button>
             </li>
           ) : null}
