@@ -14,7 +14,7 @@ const Personaje = () => {
   return (
     <>
       {personaje != null ? (
-        <div className="container" style={{ backgroundColor: "#1E90FF" }}>
+        <div className="container">
           <img
             src={personaje.image}
             alt="Imagen del personaje"
@@ -24,9 +24,11 @@ const Personaje = () => {
           <p>
             {personaje.status} - {personaje.species}
           </p>
-          <p>Gender: {personaje.gender}</p>
-          <p>Origin: {personaje.origin.name}</p>
-          <p>Last known location: {personaje.location.name}</p>
+          <ul>
+            <li>Gender: {personaje.gender}</li>
+            <li>Origin: {personaje.origin.name}</li>
+            <li>Last known location: {personaje.location.name}</li>
+          </ul>
         </div>
       ) : (
         "No hay personaje :("
